@@ -1,0 +1,151 @@
+﻿@using WebClient.Models;
+@using WebClient.Helpers
+@model Account
+
+
+<div class="pagetitle">
+    <h1>Chỉnh sửa thông tin người dùng</h1>
+</div><!-- End Page Title -->
+
+<div class="row mb-2">
+    <div class="col-sm-12 col-lg-8 m-auto">
+        <div class="row">
+            <div class="card p-3 mb-3">
+                <form id="form-edit" method="POST" asp-area="User" asp-controller="Profile" asp-action="Update">
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="Email" />
+                    <input type="hidden" asp-for="Password" />
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Email</label>
+                            <div class="col-sm-12">
+                                <input readonly value="@Model.Email" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Ảnh</label>
+                            <div class="col-sm-12">
+                                <input asp-for="Avatar" placeholder="Nhập ảnh của người dùng" type="text" class="form-control">
+                                <span asp-validation-for="Avatar" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Tên đầy đủ</label>
+                            <div class="col-sm-12">
+                                <input asp-for="Fullname" placeholder="Nhập tên đầy đủ của người dùng" type="text" class="form-control">
+                                <span asp-validation-for="Fullname" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Số điện thoại</label>
+                            <div class="col-sm-12">
+                                <input asp-for="Phone" placeholder="Nhập số điện thoại" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Mã sinh viên</label>
+                            <div class="col-sm-12">
+                                <input asp-for="StudentCode" placeholder="Nhập mã sinh viên" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Lớp</label>
+                            <div class="col-sm-12">
+                                <input asp-for="Class" placeholder="Nhập lớp" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">CCCD</label>
+                            <div class="col-sm-12">
+                                <input asp-for="Cccd" placeholder="Nhập số CCCD" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Giới tính</label>
+                            <div class="col-sm-12">
+                                <input asp-for="Gender" placeholder="Nhập giới tính" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Ngày sinh</label>
+                            <div class="col-sm-12">
+                                <input asp-for="DateOfBirth" type="date" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Cơ sở</label>
+                            <div class="col-sm-12">
+                                <input asp-for="Campus" placeholder="Nhập cơ sở" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Chuyên ngành</label>
+                            <div class="col-sm-12">
+                                <input asp-for="Major" placeholder="Nhập chuyển ngành" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Bio</label>
+                            <div class="col-sm-12">
+                                <textarea asp-for="Bio" placeholder="Nhập bio" type="text" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Địa chỉ</label>
+                            <div class="col-sm-12">
+                                <textarea asp-for="Address" placeholder="Nhập địa chỉ" type="text" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2 mt-3">
+                        <div class="col-sm-12 d-flex flex-row justify-content-start">
+                            <a asp-area="User" asp-controller="Profile" asp-action="Index" class="btn btn-secondary">
+
+                                <i class="bi bi-arrow-left"></i>
+                                <span>Trở về</span>
+                            </a>
+                            <button type="submit" class="btn btn-primary mx-2">
+                                <i class="bi bi-check-lg"></i>
+                                <span>Lưu</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>

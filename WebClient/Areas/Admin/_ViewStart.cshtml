@@ -1,0 +1,23 @@
+﻿@using WebClient.Models
+@using WebClient.Helpers
+@{
+    Account userInfo = SessionHelper.GetObject<Account>(Context.Session, "Account");
+
+    if (userInfo?.Role != null)
+    {
+        var role = userInfo.Role;
+        switch (role)
+        {
+            case "Admin":
+                Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+                break;
+            default:
+                Layout = "~/Views/Shared/Layouts/_UserLayout.cshtml";
+                break;
+        }
+    }
+    else
+    {
+        Layout = "~/Views/Shared/Layouts/_Layout.cshtml";
+    }
+}

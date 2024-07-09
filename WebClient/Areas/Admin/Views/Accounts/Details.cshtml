@@ -1,0 +1,145 @@
+﻿@using WebClient.Models;
+@using WebClient.Helpers
+@model Account
+
+
+<div class="pagetitle">
+    <h1>Thông tin người dùng</h1>
+</div><!-- End Page Title -->
+
+<div class="row mb-2">
+    <div class="col-sm-12 col-lg-8 m-auto">
+        <div class="row">
+            <div class="card p-3 mb-3">
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 text-center fw-bold">Ảnh</label>
+                        <div class="col-sm-12 text-center">
+                            <img width="200" class="rounded-circle img-fluid" src="@Model?.Avatar" alt="avatar" />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 fw-bold">Email</label>
+                        <div class="col-sm-12">
+                            <input readonly asp-for="Email" type="text" class="form-control">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 fw-bold">Tên đầy đủ</label>
+                        <div class="col-sm-12">
+                            <input disabled asp-for="Fullname" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 fw-bold">Số điện thoại</label>
+                        <div class="col-sm-12">
+                            <input disabled asp-for="Phone" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 fw-bold">Mã sinh viên</label>
+                        <div class="col-sm-12">
+                            <input disabled asp-for="StudentCode" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 fw-bold">Lớp</label>
+                        <div class="col-sm-12">
+                            <input disabled asp-for="Class" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 fw-bold">CCCD</label>
+                        <div class="col-sm-12">
+                            <input disabled asp-for="Cccd" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 fw-bold">Giới tính</label>
+                        <div class="col-sm-12">
+                            <input disabled asp-for="Gender" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 fw-bold">Ngày sinh</label>
+                        <div class="col-sm-12">
+                            <input disabled value="@Model?.DateOfBirth?.ToShortDateString()" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 fw-bold">Cơ sở</label>
+                        <div class="col-sm-12">
+                            <input disabled asp-for="Campus" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 fw-bold">Chuyên ngành</label>
+                        <div class="col-sm-12">
+                            <input disabled asp-for="Major" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 fw-bold">Bio</label>
+                        <div class="col-sm-12">
+                            <textarea disabled asp-for="Bio" type="text" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <label class="col-sm-12 fw-bold">Địa chỉ</label>
+                        <div class="col-sm-12">
+                            <textarea disabled asp-for="Address" type="text" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-sm-12 d-flex flex-row justify-content-start">
+                        <a asp-area="Admin" asp-controller="Accounts" asp-action="Index" class="btn btn-secondary">
+
+                            <i class="bi bi-arrow-left"></i>
+                            <span>Trở về</span>
+                        </a>
+                        <a asp-area="Admin" asp-controller="Accounts" asp-action="Update" asp-route-id="@Model?.Id" class="btn btn-primary mx-2">
+                            <i class="bi bi-pencil"></i>
+                            <span>Chỉnh sửa</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

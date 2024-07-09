@@ -1,0 +1,62 @@
+﻿@using WebClient.Models;
+@using WebClient.Helpers
+@model Account
+
+
+<div class="pagetitle">
+    <h1>Thêm mới người dùng</h1>
+</div><!-- End Page Title -->
+
+<div class="row mb-2">
+    <div class="col-sm-12 col-lg-8 m-auto">
+        <div class="row">
+            <div class="card p-3 mb-3">
+                <form id="form-edit" method="POST" asp-area="Admin" asp-controller="Accounts" asp-action="Create">
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Tên đầy đủ</label>
+                            <div class="col-sm-12">
+                                <input asp-for="Fullname" placeholder="Nhập tên đầy đủ của người dùng" type="text" class="form-control">
+                                <span asp-validation-for="Fullname" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Email</label>
+                            <div class="col-sm-12">
+                                <input asp-for="Email" placeholder="Nhập email của người dùng" type="text" class="form-control">
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Mật khẩu</label>
+                            <div class="col-sm-12">
+                                <input asp-for="Password" placeholder="Nhập mật khẩu" type="text" class="form-control">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2 mt-3">
+                        <div class="col-sm-12 d-flex flex-row justify-content-start">
+                            <a asp-area="Admin" asp-controller="Accounts" asp-action="Index" class="btn btn-secondary">
+
+                                <i class="bi bi-arrow-left"></i>
+                                <span>Trở về</span>
+                            </a>
+                            <button type="submit" class="btn btn-primary mx-2">
+                                <i class="bi bi-check-lg"></i>
+                                <span>Lưu</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
