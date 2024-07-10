@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using WebClient.Models;
+using WebApi.Models;
 
-namespace WebClient.Configurations
+namespace WebApi.Configurations
 {
     public class AccountConfiguration : IEntityTypeConfiguration<Account>
     {

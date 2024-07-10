@@ -1,21 +1,15 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.EntityFrameworkCore;
-using WebClient.Models;
+using WebClient.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDistributedMemoryCache();
-
-builder.Services.AddDbContext<ClientDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DB"));
-});
 
 builder.Services.AddSession();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllersWithViews();
 builder.Services.AddMemoryCache();
 builder.Services.AddHttpClient();
-
+// Services
+builder.Services.AddScoped<ClientService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\webclient\\webclient\\webclient\\migrations\\20240709170511_migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|solutionrelative:webclient\\migrations\\20240709170511_migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A74D4CB-1F00-4B93-BC80-48A5457FB416}|WebApi\\WebApi.csproj|c:\\users\\admin\\downloads\\webclient\\webclient\\webapi\\controllers\\authencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A74D4CB-1F00-4B93-BC80-48A5457FB416}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\authencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\webclient\\webclient\\webclient\\areas\\admin\\views\\accounts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\admin\\views\\accounts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\webclient\\webclient\\webclient\\areas\\admin\\views\\accounts\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\admin\\views\\accounts\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\webclient\\webclient\\webclient\\areas\\user\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\user\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\webclient\\webclient\\webclient\\areas\\admin\\views\\accounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\admin\\views\\accounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\webclient\\webclient\\webclient\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\webclient\\webclient\\webclient\\areas\\admin\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\admin\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\webclient\\webclient\\webclient\\areas\\user\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\user\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\webclient\\webclient\\webclient\\areas\\user\\views\\profile\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -323,99 +303,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20240709170511_Migrations.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Migrations\\20240709170511_Migrations.cs",
-              "RelativeDocumentMoniker": "WebClient\\Migrations\\20240709170511_Migrations.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Migrations\\20240709170511_Migrations.cs",
-              "RelativeToolTip": "WebClient\\Migrations\\20240709170511_Migrations.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "AuthenController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebApi\\Controllers\\AuthenController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\AuthenController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebApi\\Controllers\\AuthenController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\AuthenController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAADgvyEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T17:05:11.852Z",
+              "WhenOpened": "2024-07-10T15:00:34.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\Admin\\Views\\Accounts\\Details.cshtml",
-              "RelativeDocumentMoniker": "WebClient\\Areas\\Admin\\Views\\Accounts\\Details.cshtml",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\Admin\\Views\\Accounts\\Details.cshtml",
-              "RelativeToolTip": "WebClient\\Areas\\Admin\\Views\\Accounts\\Details.cshtml",
-              "ViewState": "AQIAAHgAAAAAAAAAAAAAAH8AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-09T17:04:09.665Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\User\\Views\\Profile\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Views\\Profile\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\User\\Views\\Profile\\Index.cshtml",
-              "RelativeToolTip": "WebClient\\Areas\\User\\Views\\Profile\\Index.cshtml",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAAAH8AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-09T17:02:17.905Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\Admin\\Views\\Accounts\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebClient\\Areas\\Admin\\Views\\Accounts\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\Admin\\Views\\Accounts\\Index.cshtml",
-              "RelativeToolTip": "WebClient\\Areas\\Admin\\Views\\Accounts\\Index.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-09T17:02:12.551Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\Admin\\Controllers\\AccountsController.cs",
-              "RelativeDocumentMoniker": "WebClient\\Areas\\Admin\\Controllers\\AccountsController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\Admin\\Controllers\\AccountsController.cs",
-              "RelativeToolTip": "WebClient\\Areas\\Admin\\Controllers\\AccountsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\User\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\User\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "WebClient\\Areas\\User\\Controllers\\ProfileController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAuwCAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T17:01:24.856Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "WebClient\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "WebClient\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T17:01:24.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Update.cshtml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\User\\Views\\Profile\\Update.cshtml",
-              "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Views\\Profile\\Update.cshtml",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\User\\Views\\Profile\\Update.cshtml",
-              "RelativeToolTip": "WebClient\\Areas\\User\\Views\\Profile\\Update.cshtml",
-              "ViewState": "AQIAAHgAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-09T17:00:57.891Z"
+              "WhenOpened": "2024-07-10T15:00:09.079Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Update.cshtml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\Admin\\Views\\Accounts\\Update.cshtml",
-              "RelativeDocumentMoniker": "WebClient\\Areas\\Admin\\Views\\Accounts\\Update.cshtml",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\Admin\\Views\\Accounts\\Update.cshtml",
-              "RelativeToolTip": "WebClient\\Areas\\Admin\\Views\\Accounts\\Update.cshtml",
-              "ViewState": "AQIAAHgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\User\\Views\\Profile\\Update.cshtml",
+              "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Views\\Profile\\Update.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\User\\Views\\Profile\\Update.cshtml",
+              "RelativeToolTip": "WebClient\\Areas\\User\\Views\\Profile\\Update.cshtml",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAWwBUAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-09T17:00:43.199Z"
+              "WhenOpened": "2024-07-10T14:59:52.018Z",
+              "EditorCaption": ""
             }
           ]
         },

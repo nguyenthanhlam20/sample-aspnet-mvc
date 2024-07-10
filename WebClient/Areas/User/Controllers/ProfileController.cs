@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using WebClient.Helpers;
 using WebClient.Models;
+using WebClient.Services;
 
 namespace WebClient.Areas.User.Controllers
 {
@@ -9,25 +9,25 @@ namespace WebClient.Areas.User.Controllers
     [Route("User/[Controller]/[Action]")]
     public class ProfileController : Controller
     {
-        private readonly ClientDbContext _context;
-        public ProfileController(ClientDbContext context)
+        private readonly ClientService _service;
+        public ProfileController(ClientService service)
         {
-            _context = context;
+            _service = service;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
             Account userInfo = SessionHelper.GetObject<Account>(HttpContext.Session, "Account");
-            var account = await _context.Accounts.SingleOrDefaultAsync(x => x.Id == userInfo.Id);
+            var account = await _service.Get<Account>("Accounts/GetById?id=" + userInfo.Id);
             return View(account);
         }
 
         [HttpGet]
-        public async Task<IActionResult> Update(int id)
+        public async Task<IActionResult> Update()
         {
             Account userInfo = SessionHelper.GetObject<Account>(HttpContext.Session, "Account");
-            var account = await _context.Accounts.SingleOrDefaultAsync(x => x.Id == userInfo.Id);
+            var account = await _service.Get<Account>("Accounts/GetById?id=" + userInfo.Id);
             return View(account);
         }
 
@@ -36,25 +36,10 @@ namespace WebClient.Areas.User.Controllers
         {
             if (ModelState.IsValid)
             {
-                var exist = await _context.Accounts.SingleOrDefaultAsync(x => x.Id == account.Id);
-                if (exist != null)
+                var response = await _service.Post("Accounts/Update", account);
+                if (response != null)
                 {
-                    exist.Fullname = account.Fullname;
-                    exist.Address = account.Address;
-                    exist.Avatar = account.Avatar;
-                    exist.StudentCode = account.StudentCode;
-                    exist.Major = account.Major;
-                    exist.Bio = account.Bio;
-                    exist.Phone = account.Phone;
-                    exist.Campus = account.Campus;
-                    exist.Cccd = account.Cccd;
-                    exist.Class = account.Class;
-                    exist.DateOfBirth = account.DateOfBirth;
-                    exist.Gender = account.Gender;
-
-                    _context.Accounts.Update(exist);
-                    await _context.SaveChangesAsync();
-                    ToastHelper.ShowSuccess(TempData, "Chỉnh sửa thông tin cá nhân thành công.");
+                    ToastHelper.ShowSuccess(TempData, "Chỉnh sửa thông tin người dùng thành công.");
                     return RedirectToAction(nameof(Index));
                 }
             }

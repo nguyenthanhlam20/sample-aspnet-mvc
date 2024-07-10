@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebClient.Configurations;
-using WebClient.Seeding;
+using WebApi.Configurations;
+using WebApi.Seeding;
 
-namespace WebClient.Models
+namespace WebApi.Models
 {
     public class ClientDbContext : DbContext
     {

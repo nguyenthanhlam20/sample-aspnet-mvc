@@ -1,20 +1,17 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Security.Principal;
+﻿using Microsoft.AspNetCore.Mvc;
 using WebClient.Helpers;
 using WebClient.Models;
+using WebClient.Services;
 
 namespace WebClient.Controllers
 {
     public class AuthenController : Controller
     {
-        private readonly ClientDbContext _context;
+        private readonly ClientService _service;
 
-        public AuthenController(ClientDbContext context)
+        public AuthenController(ClientService service)
         {
-            _context = context;
+            _service = service;
         }
 
         [HttpGet]
@@ -36,19 +33,14 @@ namespace WebClient.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var anyAccount = await _context.Accounts.AnyAsync(x => x.Email == account.Email);
-                    if (!anyAccount)
+                    var response = await _service.Post("Authen/Register", account);
+                    if(response != null)
                     {
-                        account.Role = "User";
-                        account.Avatar = "https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg";
-                        _context.Accounts.Add(account);
-                        await _context.SaveChangesAsync();
                         ToastHelper.ShowSuccess(TempData, "Tạo mới người dùng thành công.");
                         return RedirectToAction(nameof(Index));
                     }
                     ToastHelper.ShowError(TempData, "Người dùng có email " + account.Email + "đã tồn tại trong hệ thống.");
                 }
-                return View(account);
             }
             catch (Exception ex)
             {
@@ -62,13 +54,13 @@ namespace WebClient.Controllers
         {
             try
             {
-                var exist = await _context.Accounts.FirstOrDefaultAsync(x => x.Email == account.Email && x.Password == account.Password);
-                if (exist == null) throw new Exception("Tài khoản hoặc mật khẩu không chính xác.");
-                SessionHelper.SetObject<Account>(HttpContext.Session, "Account", exist);
+                var response = await _service.Post<Account>("Authen/SignIn", account);
+                if (response == null) throw new Exception("Tài khoản hoặc mật khẩu không chính xác.");
+                SessionHelper.SetObject<Account>(HttpContext.Session, "Account", response);
                 ToastHelper.ShowSuccess(TempData, "Đăng nhập thành công.");
 
                 // Redirect the user based on their role
-                switch (exist.Role)
+                switch (response.Role)
                 {
                     case "Admin":
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
@@ -88,7 +80,7 @@ namespace WebClient.Controllers
 
         [HttpGet]
         [Route("/SignOut")]
-        public async Task<IActionResult> LogOut()
+        public IActionResult LogOut()
         {
             try
             {

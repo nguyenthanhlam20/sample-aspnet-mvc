@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebClient.Models;
+using WebApi.Models;
 
-namespace WebClient.Seeding
+namespace WebApi.Seeding
 {
     public class AccountSeeder
     {

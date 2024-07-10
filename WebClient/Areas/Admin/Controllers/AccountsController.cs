@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using WebClient.Helpers;
 using WebClient.Models;
 using WebClient.Requests;
+using WebClient.Services;
 
 namespace WebClient.Areas.Admin.Controllers
 {
@@ -10,33 +10,21 @@ namespace WebClient.Areas.Admin.Controllers
     [Route("Admin/[Controller]/[Action]")]
     public class AccountsController : Controller
     {
-        private readonly ClientDbContext _context;
-        public AccountsController(ClientDbContext context)
+        private readonly ClientService _service;
+
+        public AccountsController(ClientService service)
         {
-            _context = context;
+            _service = service;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index(PagingRequest request)
         {
             var searchTerm = request.SearchTerm;
-            if (string.IsNullOrEmpty(searchTerm)) searchTerm = "";
-
-            var accounts = await _context.Accounts
-                .Where(x => x.Role != "Admin")
-                .Where(x => (x.Fullname ?? "").Contains(searchTerm)
-                || x.Email.Contains(searchTerm)) 
-                .ToListAsync();
-
-            request.TotalRecord = accounts.Count();
-            request.TotalPages = (int)Math.Ceiling(accounts.Count() / (double)request.PageSize);
-            accounts = accounts.Skip((request.CurrentPage - 1) * request.PageSize).Take(request.PageSize).ToList();
-            accounts = accounts.OrderByDescending(a => a.Id).ToList();
-            request.Items = accounts;
-
-            return View(request);
+            if (string.IsNullOrEmpty(searchTerm)) request.SearchTerm = "";
+            var response = await _service.Post<PagingRequest>("Accounts/GetAll", request);
+            return View(response);
         }
-
 
         [HttpGet]
         public IActionResult Create() => View();
@@ -46,13 +34,9 @@ namespace WebClient.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var anyAccount = await _context.Accounts.AnyAsync(x => x.Email == account.Email);
-                if(!anyAccount)
+                var response = await _service.Post("Accounts/Create", account);
+                if (response != null)
                 {
-                    account.Role = "User";
-                    account.Avatar = "https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg";
-                    _context.Accounts.Add(account);
-                    await _context.SaveChangesAsync();
                     ToastHelper.ShowSuccess(TempData, "Tạo mới người dùng thành công.");
                     return RedirectToAction(nameof(Index));
                 }
@@ -64,14 +48,14 @@ namespace WebClient.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
-            var account = await _context.Accounts.SingleOrDefaultAsync(x => x.Id == id);
+            var account = await _service.Get<Account>("Accounts/GetById?id=" + id);
             return View(account);
         }
 
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-            var account = await _context.Accounts.SingleOrDefaultAsync(x => x.Id == id);
+            var account = await _service.Get<Account>("Accounts/GetById?id=" + id);
             return View(account);
         }
 
@@ -80,24 +64,9 @@ namespace WebClient.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var exist = await _context.Accounts.SingleOrDefaultAsync(x => x.Id == account.Id);
-                if (exist != null)
+                var response = await _service.Post("Accounts/Update", account);
+                if (response != null)
                 {
-                    exist.Fullname = account.Fullname;
-                    exist.Address = account.Address;
-                    exist.Avatar = account.Avatar;
-                    exist.StudentCode = account.StudentCode;
-                    exist.Major = account.Major;
-                    exist.Bio = account.Bio;
-                    exist.Phone = account.Phone;
-                    exist.Campus = account.Campus;
-                    exist.Cccd = account.Cccd;
-                    exist.Class = account.Class;
-                    exist.DateOfBirth = account.DateOfBirth;
-                    exist.Gender = account.Gender;
-
-                    _context.Accounts.Update(exist);
-                    await _context.SaveChangesAsync();
                     ToastHelper.ShowSuccess(TempData, "Chỉnh sửa thông tin người dùng thành công.");
                     return RedirectToAction(nameof(Index));
                 }
