@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\webclient\\webclient\\webclient\\controllers\\authencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610D668E-AB65-41CD-92C7-7B7ACE10C8D1}|WebClient\\WebClient.csproj|solutionrelative:webclient\\controllers\\authencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8A74D4CB-1F00-4B93-BC80-48A5457FB416}|WebApi\\WebApi.csproj|c:\\users\\admin\\downloads\\webclient\\webclient\\webapi\\controllers\\authencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A74D4CB-1F00-4B93-BC80-48A5457FB416}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\authencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -304,31 +308,44 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AuthenController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Controllers\\AuthenController.cs",
+              "RelativeDocumentMoniker": "WebClient\\Controllers\\AuthenController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Controllers\\AuthenController.cs",
+              "RelativeToolTip": "WebClient\\Controllers\\AuthenController.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAA3wCYAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T15:19:26.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthenController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebApi\\Controllers\\AuthenController.cs",
               "RelativeDocumentMoniker": "WebApi\\Controllers\\AuthenController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebApi\\Controllers\\AuthenController.cs",
               "RelativeToolTip": "WebApi\\Controllers\\AuthenController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAADgvyEAAAAMAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAnwBEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-10T15:00:34.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ProfileController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\User\\Controllers\\ProfileController.cs",
               "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Controllers\\ProfileController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\User\\Controllers\\ProfileController.cs",
               "RelativeToolTip": "WebClient\\Areas\\User\\Controllers\\ProfileController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAuwCAAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA+wCAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-10T15:00:09.079Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Update.cshtml",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\WebClient\\WebClient\\WebClient\\Areas\\User\\Views\\Profile\\Update.cshtml",
               "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Views\\Profile\\Update.cshtml",
@@ -336,8 +353,7 @@
               "RelativeToolTip": "WebClient\\Areas\\User\\Views\\Profile\\Update.cshtml",
               "ViewState": "AQIAAAQAAAAAAAAAAAAWwBUAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T14:59:52.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T14:59:52.018Z"
             }
           ]
         },

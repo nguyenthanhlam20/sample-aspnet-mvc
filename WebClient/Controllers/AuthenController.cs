@@ -36,8 +36,8 @@ namespace WebClient.Controllers
                     var response = await _service.Post("Authen/Register", account);
                     if(response != null)
                     {
-                        ToastHelper.ShowSuccess(TempData, "Tạo mới người dùng thành công.");
-                        return RedirectToAction(nameof(Index));
+                        ToastHelper.ShowSuccess(TempData, "Tạo mới tài khoản thành công.");
+                        return RedirectToAction(nameof(SignIn));
                     }
                     ToastHelper.ShowError(TempData, "Người dùng có email " + account.Email + "đã tồn tại trong hệ thống.");
                 }
